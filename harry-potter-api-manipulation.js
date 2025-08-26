@@ -34,4 +34,4 @@ async function fetchCharacters(endpoint = ENDPOINTS.STUDENTS) {
 //   }));
 // }
 
-module.exports = { fetchCharacters, ENDPOINTS, organizeCharacters };
+module.exports = { fetchCharacters, ENDPOINTS };
