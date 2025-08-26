@@ -9,9 +9,9 @@ async function answersLists() {
     const mediumAnswers = [];
     const hardAnswers = [];
     const allCharacters = await fetchCharacters(ENDPOINTS.ALL_CHARACTERS);
-    const first50 = Object.fromEntries(allCharacters.slice(0, 10).map((character, index) => [index, character.name]))
+    const characterNameAndIndexObject = Object.fromEntries(allCharacters.map((character, index) => [index, character.name]))
     
-    for (const [key, value] of Object.entries(first50)) {
+    for (const [key, value] of Object.entries(characterNameAndIndexObject)) {
         const response = prompt(`${key}: ${value} - Include this character in easy medium or hard? matches on [e]easy,m[medium],h[hard]`)
 
         
